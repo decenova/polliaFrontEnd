@@ -1,0 +1,187 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0px; }
+
+#gradientBackgroundBlue01 {
+  background-color: #08AEEA;
+  background-image: linear-gradient(63deg, #08AEEA 0%, #2AF598 100%); }
+
+#oneline, .elementContain .element .detail .title, .elementContain .element .detail .address {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#gradientBlue01 {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(45deg, #505096, #64c8c8); }
+
+.window, .windowLimitWidth, .windowDyanmicHigh {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  .window .center, .windowLimitWidth .center, .windowDyanmicHigh .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .window .full, .windowLimitWidth .full, .windowDyanmicHigh .full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px; }
+
+.windowLimitWidth {
+  max-width: 1440px;
+  margin: auto; }
+
+.windowDyanmicHigh {
+  height: auto; }
+
+.backgroundImage, .elementContain .element .imageCover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.backgroundImageFix {
+  background-attachment: fixed; }
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, #505096, #64c8c8);
+  margin: 8px 0px; }
+
+.elementContain {
+  position: relative;
+  display: inline-block;
+  padding: 24px;
+  min-height: 300px;
+  min-width: 300px; }
+  .elementContain .element {
+    position: relative;
+    margin: 0px auto;
+    height: 300px;
+    width: 300px;
+    background-color: #ffffff; }
+    .elementContain .element .imageCover {
+      width: 100%;
+      height: 50%; }
+    .elementContain .element .squareContain .square {
+      left: 100%;
+      top: 50%;
+      transform: translate(-150%, -50%);
+      position: absolute;
+      height: 33.9408px;
+      width: 33.9408px; }
+      .elementContain .element .squareContain .square:before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        transform: rotate(45deg);
+        background: linear-gradient(45deg, #505096, #64c8c8);
+        background-color: #1900ff; }
+      .elementContain .element .squareContain .square p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-weight: bold; }
+    .elementContain .element .detail {
+      padding: 6px 6px 6px 6px;
+      color: #333333; }
+      .elementContain .element .detail .type {
+        font-size: 1em;
+        color: #3333ff; }
+      .elementContain .element .detail .title {
+        font-size: 1.2em;
+        font-weight: bold; }
+      .elementContain .element .detail .address {
+        font-size: 0.8em; }
+      .elementContain .element .detail .description {
+        font-style: italic;
+        font-size: 0.8em; }
+
+.buttonContain {
+  position: relative;
+  padding: 0px 16px;
+  display: inline-block; }
+
+.button {
+  padding: 0px 10px;
+  text-align: center;
+  height: 32px;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none; }
+
+.button01 {
+  position: relative;
+  font-size: 24px;
+  line-height: 32px; }
+  .button01 * {
+    position: relative; }
+  .button01:hover {
+    color: #333333;
+    background-color: #ffffff; }
+    .button01:hover .edge::before {
+      background-color: #ffffff; }
+  .button01:active {
+    color: #333333;
+    background-color: #cccccc; }
+    .button01:active .edge::before {
+      background-color: #cccccc;
+      border-color: #cccccc; }
+  .button01 .edge {
+    position: absolute;
+    height: 22.6272px;
+    width: 22.6272px; }
+    .button01 .edge:before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      transform: rotate(45deg); }
+  .button01 .left {
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .button01 .left:before {
+      border-bottom: 3px solid #ffffff;
+      border-left: 3px solid #ffffff; }
+  .button01 .right {
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .button01 .right:before {
+      border-top: 3px solid #ffffff;
+      border-right: 3px solid #ffffff; }
+
+#formDefaultColor, input, select, select option {
+  background-color: #ffffff;
+  border: none;
+  color: #333333; }
+  #formDefaultColor:focus, input:focus, select:focus, select option:focus {
+    outline: none; }
+
+input {
+  border-bottom: 1px solid #333333;
+  padding: 6px 6px;
+  font-size: 1em; }
+
+select {
+  padding: 6px 6px;
+  font-size: 1em; }
+  select option {
+    background-color: #ffffff;
+    outline: none; }
+
+/*# sourceMappingURL=decistyle.css.map */

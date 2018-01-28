@@ -1,0 +1,9 @@
+@mixin setPosition($left,$top,$x,$y){
+    left: $left * 1%;
+    top: $top * 1%;
+    transform: translate($x * 1%,$y * 1%);
+}
+
+@mixin diamond{
+    transform: rotate(45deg);
+}
