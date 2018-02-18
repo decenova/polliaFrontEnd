@@ -9,7 +9,7 @@ p {
   background-color: #08AEEA;
   background-image: linear-gradient(63deg, #08AEEA 0%, #2AF598 100%); }
 
-#oneline, .elementContain .element .detail .title, .elementContain .element .detail .address {
+#oneline, .popupContain .popup .detail .title p, .elementContain .element .detail .title, .elementContain .element .detail .address {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -42,7 +42,7 @@ p {
 .windowDyanmicHigh {
   height: auto; }
 
-.backgroundImage, .elementContain .element .imageCover {
+.backgroundImage, .avatar .image, .elementContain .element .imageCover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -55,6 +55,119 @@ p {
   height: 1px;
   background: linear-gradient(45deg, #505096, #64c8c8);
   margin: 8px 0px; }
+
+.avatar {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  overflow: hidden; }
+  .avatar .frame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 65.7106781%;
+    height: 65.7106781%; }
+    .avatar .frame::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border: 100px solid transparent;
+      -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+      -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+      border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+      border-image-slice: 1; }
+    .avatar .frame::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      transform: rotate(45deg);
+      box-sizing: border-box;
+      border: 5px solid #fff;
+      outline: 100px solid #fff;
+      outline-offset: 2px; }
+  .avatar .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/avatar.jpg"); }
+
+.avatar2x {
+  width: 128px;
+  height: 128px; }
+  .avatar2x .frame {
+    width: 60.7106781%;
+    height: 60.7106781%; }
+    .avatar2x .frame::before {
+      border-width: 100px; }
+    .avatar2x .frame::after {
+      border-width: 5px;
+      outline-width: 100px;
+      outline-offset: 5px; }
+
+ul {
+  margin: 0;
+  padding-left: 10px;
+  list-style: none; }
+
+.popupContain {
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .popupContain .backgroundExit {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .popupContain .popup {
+    position: absolute;
+    max-height: 480px;
+    max-width: 780px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1.6fr; }
+    .popupContain .popup .detail {
+      display: grid;
+      grid-template-rows: 100px 1fr 120px;
+      padding: 0px 0px 0px 20px; }
+      .popupContain .popup .detail .title {
+        padding: 20px 0px 0px 0px; }
+        .popupContain .popup .detail .title span {
+          position: absolute;
+          left: 100%;
+          top: 0%;
+          transform: translate(-200%, 50%); }
+        .popupContain .popup .detail .title .t1 {
+          color: #3333ff; }
+        .popupContain .popup .detail .title .t2 {
+          font-size: 2em; }
+        .popupContain .popup .detail .title .t3 {
+          font-size: 0.9em;
+          color: #666666; }
+      .popupContain .popup .detail .info {
+        max-height: 260px;
+        overflow: auto; }
+        .popupContain .popup .detail .info div {
+          box-sizing: border-box;
+          padding-top: 16px;
+          height: 100%; }
+      .popupContain .popup .detail .control {
+        padding-top: 10px;
+        position: relative; }
+        .popupContain .popup .detail .control .buttonsContain {
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          transform: translate(-120%, -50%); }
 
 .elementContain {
   position: relative;
@@ -108,6 +221,69 @@ p {
       .elementContain .element .detail .description {
         font-style: italic;
         font-size: 0.8em; }
+
+.squareContainInfo {
+  position: relative;
+  height: 100px;
+  width: 100px; }
+  .squareContainInfo .square {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 70.71px;
+    width: 70.71px; }
+    .squareContainInfo .square:before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      transform: rotate(45deg);
+      border: 2px solid #3333ff; }
+    .squareContainInfo .square p {
+      position: absolute;
+      color: #333333;
+      text-align: center;
+      font-family: hero-light; }
+    .squareContainInfo .square .label {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -200%);
+      font-size: 0.75em; }
+    .squareContainInfo .square .info {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  .squareContainInfo .square2d {
+    height: 35.355px;
+    width: 35.355px; }
+    .squareContainInfo .square2d p {
+      font-size: 1em; }
+    .squareContainInfo .square2d .label {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -150%);
+      font-size: 0.5em; }
+  .squareContainInfo .square2x {
+    height: 141.42px;
+    width: 141.42px; }
+    .squareContainInfo .square2x p {
+      font-size: 2em; }
+  .squareContainInfo .pos1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .squareContainInfo .pos2 {
+    left: 105%;
+    top: 80%;
+    transform: translate(-50%, -50%); }
+  .squareContainInfo .pos3 {
+    left: 135%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .squareContainInfo .yellow:before {
+    border-color: #ffbd00; }
 
 .buttonContain {
   position: relative;
@@ -164,6 +340,47 @@ p {
     .button01 .right:before {
       border-top: 3px solid #ffffff;
       border-right: 3px solid #ffffff; }
+
+.button02 {
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: #3333ff; }
+  .button02 * {
+    position: relative; }
+  .button02:hover {
+    color: #ffffff;
+    background-color: #3388ff; }
+    .button02:hover .edge::before {
+      background-color: #3388ff; }
+  .button02:active {
+    color: #ffffff;
+    background-color: #333388; }
+    .button02:active .edge::before {
+      background-color: #333388; }
+  .button02 .edge {
+    position: absolute;
+    height: 22.6272px;
+    width: 22.6272px; }
+    .button02 .edge:before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      transform: rotate(45deg); }
+  .button02 .left {
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .button02 .left:before {
+      background-color: #3333ff; }
+  .button02 .right {
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .button02 .right:before {
+      background-color: #3333ff; }
 
 #formDefaultColor, input, select, select option {
   background-color: #ffffff;

@@ -76,6 +76,55 @@ $buttonColor: #ffffff;
   }
 }
 
+.button02 {
+  position: relative;
+  font-size: 24px;
+  line-height: $buttonHeight;
+  background-color: #3333ff;
+  *{
+    position: relative;
+  }
+  &:hover{
+    color: #ffffff;
+    background-color: #3388ff;
+    .edge::before{
+      background-color: #3388ff;
+    }
+  }
+  &:active{
+    color: #ffffff;
+    background-color: #333388;
+    .edge::before{
+      background-color: #333388;
+    }
+  }
+  .edge {
+    position: absolute;
+    height: $buttonHeight * 0.7071;
+    width: $buttonHeight  * 0.7071;
+    &:before{
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      @include diamond();
+    }
+  }
+  .left {
+    @include setPosition(0, 50, -50, -50);
+    &:before{
+      background-color: #3333ff;
+    }
+  }
+  .right {
+    @include setPosition(100, 50, -50, -50);
+    &:before{
+      background-color: #3333ff;
+    }
+  }
+}
+
 //----------
 //input
 //----------
@@ -99,6 +148,7 @@ input{
   padding: $inputPadding;
   font-size: $inputFontSize;
 }
+
 
 select{
   @extend #formDefaultColor;
