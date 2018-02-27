@@ -27,7 +27,8 @@
   background-image: linear-gradient(0deg, rgba(20, 50, 100, 0.8) 0%, rgba(255, 255, 255, 0) 80%); }
 
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-color: #eeeeee; }
 
 .a {
   position: relative; }
@@ -37,7 +38,6 @@ body {
     color: #ffffff; }
   .a .a2 {
     position: absolute;
-    height: 42px;
     width: 100%;
     box-sizing: border-box;
     left: 0%;
@@ -47,20 +47,34 @@ body {
       margin: auto;
       height: 100%;
       max-width: 780px;
-      background-color: #ffffff;
+      background-color: #eeeeee;
       padding: 4px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr; }
       .a .a2 .a2-1 input {
-        width: 30%; }
+        width: 100%; }
       .a .a2 .a2-1 select {
-        width: 20%; }
+        width: 100%; }
+      .a .a2 .a2-1 .button02 {
+        background-color: #33c5ff; }
+        .a .a2 .a2-1 .button02:hover {
+          color: #ffffff;
+          background-color: #3388ff; }
+          .a .a2 .a2-1 .button02:hover .edge::before {
+            background-color: #3388ff; }
+        .a .a2 .a2-1 .button02:active {
+          color: #ffffff;
+          background-color: #006dc7; }
+          .a .a2 .a2-1 .button02:active .edge::before {
+            background-color: #006dc7; }
 
 .b {
   position: relative; }
   .b .b1 .b1-1 {
     background-image: url("./img/partynight.jpg"); }
   .b .b1 .b1-2 {
-    background-color: #ffffff; }
+    background-color: #eeeeee; }
   .b .b1 .b1-3 {
     position: relative; }
     .b .b1 .b1-3 .b1-1-1 {
@@ -120,6 +134,15 @@ nav {
     font-size: 32px;
     text-align: center;
     overflow: hidden; }
+    nav .n1 p {
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      nav .n1 p i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
   nav .n2 * {
     display: none; }
   nav .n2 input, nav .n2 select {

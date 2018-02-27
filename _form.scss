@@ -132,6 +132,8 @@ $inputPadding: 6px 6px;
 $inputFontSize: 1em;
 $inputBackgroundColor: #ffffff;
 $inputColor: #333333;
+$inputBorderColor: rgba(51,51,51,0.5);
+$inputFocusBorderColor: rgb(0, 119, 255);
 
 #formDefaultColor{
   background-color: $inputBackgroundColor;
@@ -144,11 +146,22 @@ $inputColor: #333333;
 
 input{
   @extend #formDefaultColor;
-  border-bottom: 1px solid $inputColor;
+  border-bottom: 1px solid $inputBorderColor;
   padding: $inputPadding;
   font-size: $inputFontSize;
+  transition: border 0.5s;
+}
+input:focus{
+  border-bottom: 2px solid $inputFocusBorderColor;
 }
 
+.inputGroup{
+  &::selection{
+    label{
+      color: $inputFocusBorderColor;
+    }
+  }
+}
 
 select{
   @extend #formDefaultColor;
@@ -162,4 +175,12 @@ select{
     background-color: $inputBackgroundColor;
     outline: none;
   }
+}
+
+label{
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: $inputPadding;
+  padding-bottom: 3px;
 }

@@ -43,6 +43,7 @@ $elementWidth: 300px;
 
 body {
   font-family: sans-serif;
+  background-color: #eeeeee;
 }
 
 //----------
@@ -62,22 +63,43 @@ body {
 
   .a2 {
     position: absolute;
-    height: 42px;
+    // height: 42px;
     width: 100%;
     box-sizing: border-box;
+    
     @include setPosition(0, 100, 0, -200);
     .a2-1 {
       margin: auto;
       height: 100%;
       max-width: 780px;
-      background-color: #ffffff;
+      background-color: #eeeeee;
       padding: 4px;
       box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
       input {
-        width: 30%;
+        width: 100%;
       }
       select {
-        width: 20%;
+        width: 100%;
+      }
+      .button02 {
+
+        background-color: #33c5ff;
+        &:hover{
+          color: #ffffff;
+          background-color: #3388ff;
+          .edge::before{
+            background-color: #3388ff;
+          }
+        }
+        &:active{
+          color: #ffffff;
+          background-color: #006dc7;
+          .edge::before{
+            background-color: #006dc7;
+          }
+        }
       }
     }
   }
@@ -91,7 +113,7 @@ body {
     }
     .b1-2 {
       //@extend #gradientBackgroundPollia01;
-      background-color: #ffffff;
+      background-color: #eeeeee;
     }
     .b1-3 {
       //background-image: url("./img/partynight.jpg")
@@ -168,6 +190,15 @@ nav {
     font-size: 32px;
     text-align: center;
     overflow: hidden;
+    p{
+      height: 100%;
+      width: 100%;
+      position: relative;
+      i{
+        position: absolute;
+        @include setPosition(50,50,-50,-50);
+      }
+    }
   }
   .n2 {
     * {

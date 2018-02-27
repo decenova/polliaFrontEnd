@@ -118,6 +118,7 @@ ul {
   list-style: none; }
 
 .popupContain {
+  display: none;
   position: fixed;
   top: 0;
   left: 0; }
@@ -390,9 +391,16 @@ ul {
     outline: none; }
 
 input {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
   padding: 6px 6px;
-  font-size: 1em; }
+  font-size: 1em;
+  transition: border 0.5s; }
+
+input:focus {
+  border-bottom: 2px solid #0077ff; }
+
+.inputGroup::selection label {
+  color: #0077ff; }
 
 select {
   padding: 6px 6px;
@@ -400,5 +408,12 @@ select {
   select option {
     background-color: #ffffff;
     outline: none; }
+
+label {
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 6px 6px;
+  padding-bottom: 3px; }
 
 /*# sourceMappingURL=decistyle.css.map */
